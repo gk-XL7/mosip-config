@@ -78,7 +78,7 @@
         "ara": "اختر تاريخ الميلاد"
       },
       "alignmentGroup": "groupC",
-      "required": true
+      "required": false
     }
   ],
   "errors": {
