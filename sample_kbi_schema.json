@@ -46,9 +46,11 @@
       "controlType": "date",
       "type": "date",
       "label": {
+        "en": "Birthdate"
         "khm": "ថ្ងៃខែឆ្នាំកំណើត"
       },
       "placeholder": {
+        "en": "Enter Birthdate"
         "khm": "ថ្ងៃខែឆ្នាំកំណើត"
       },
       "alignmentGroup": "groupC",
