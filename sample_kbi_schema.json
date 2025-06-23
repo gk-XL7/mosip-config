@@ -41,6 +41,11 @@
         "khm": "ឈ្មោះពេញ",
         "ar": "الاسم الكامل"
       },
+      "placeholder": {
+        "eng": "Enter Full Name",
+        "khm": "ឈ្មោះពេញ",
+        "ar": "الاسم الكامل"
+      },
       "validators": [
         {
           "regex": "^(?!.*[A-Z]).*$",
@@ -66,6 +71,9 @@
       "controlType": "date",
       "type": "date",
       "label": {
+        "khm": "ថ្ងៃខែឆ្នាំកំណើត"
+      },
+      "placeholder": {
         "khm": "ថ្ងៃខែឆ្នាំកំណើត"
       },
       "alignmentGroup": "groupC",
