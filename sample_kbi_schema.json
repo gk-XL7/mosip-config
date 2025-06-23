@@ -4,33 +4,58 @@
       "id": "individualId",
       "controlType": "textbox",
       "label": {
-        "eng": "Policy Number"
+        "en": "Policy Number",
+        "km": "លេខគោលនយោបាយ",
+        "ara": "رقم السياسة"
+      },
+      "placeholder": {
+        "en": "Enter Policy Number",
+        "km": "បញ្ចូលលេខគោលការណ៍",
+        "ara": "أدخل رقم السياسة"
       },
       "validators": [
         {
-          "type": "regex",
-          "validator": "",
-          "langCode": "eng",
-          "errorCode": ""
+          "regex": "^[a-zA-Z0-9\\s]+$",
+          "error": {
+            "km": "តួអក្សរពិសេសមិនត្រូវបានអនុញ្ញាតទេ។",
+            "ara": "لا يسمح باستخدام الأحرف الخاصة"
+          }
+        },
+        {
+          "regex": "^(?!.*[A-Z]).*$",
+          "error": {
+            "eng": "No uppercase characters allowed",
+            "ar": "لا يسمح باستخدام الأحرف الكبيرة"
+          }
         }
       ],
-      "alignmentGroup": "groupA",
-      "required": true
+      "required": true,
+      "alignmentGroup": "groupA"
     },
     {
-      "id": "phoneNumber",
+      "id": "fullName",
       "controlType": "textbox",
+      "type": "simpleType",
       "label": {
-        "eng": "Phone Number",
-        "khm": "លេខទូរស័ព្ទ",
-        "ara": "رقم التليفون"
+        "eng": "Full Name",
+        "khm": "ឈ្មោះពេញ",
+        "ar": "الاسم الكامل"
       },
       "validators": [
         {
-          "type": "regex",
-          "validator": "",
-          "langCode": "eng",
-          "errorCode": ""
+          "regex": "^(?!.*[A-Z]).*$",
+          "error": {
+            "ar": "لا يسمح باستخدام الأحرف الكبيرة",
+            "en": "No uppercase characters allowed"
+          },
+          "langCode": "km"
+        },
+        {
+          "regex": "^[a-zA-Z0-9\\s]+$",
+          "error": {
+            "km": "តួអក្សរពិសេសមិនត្រូវបានអនុញ្ញាតទេ។",
+            "ara": "لا يسمح باستخدام الأحرف الخاصة"
+          }
         }
       ],
       "alignmentGroup": "groupB",
@@ -41,16 +66,28 @@
       "controlType": "date",
       "type": "date",
       "label": {
-        "eng": "Birth Date"
+        "khm": "ថ្ងៃខែឆ្នាំកំណើត"
       },
       "alignmentGroup": "groupC",
       "required": true
     }
   ],
-  "mandatoryLanguages": [
-    "eng"
-  ],
-  "optionalLanguages": [
-    "khm"
-  ]
+  "errors": {
+    "required": {
+      "en": "This field is required",
+      "ara": "هذه الخانة مطلوبه"
+    }
+  },
+  "language": {
+    "mandatory": ["eng"],
+    "optional": ["khm"],
+    "langCodeMap": {
+      "eng": "en",
+      "hin": "hi",
+      "ara": "ar",
+      "kan": "kn",
+      "tam": "ta",
+      "khm": "km"
+    }
+  }
 }
