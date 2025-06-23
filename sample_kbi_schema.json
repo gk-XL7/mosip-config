@@ -13,29 +13,12 @@
         "km": "បញ្ចូលលេខគោលការណ៍",
         "ara": "أدخل رقم السياسة"
       },
-      "validators": [
-        {
-          "regex": "^[a-zA-Z0-9\\s]+$",
-          "error": {
-            "km": "តួអក្សរពិសេសមិនត្រូវបានអនុញ្ញាតទេ។",
-            "ara": "لا يسمح باستخدام الأحرف الخاصة"
-          }
-        },
-        {
-          "regex": "^(?!.*[A-Z]).*$",
-          "error": {
-            "eng": "No uppercase characters allowed",
-            "ar": "لا يسمح باستخدام الأحرف الكبيرة"
-          }
-        }
-      ],
       "required": true,
       "alignmentGroup": "groupA"
     },
     {
       "id": "fullName",
       "controlType": "textbox",
-      "type": "simpleType",
       "label": {
         "eng": "Full Name",
         "khm": "ឈ្មោះពេញ",
@@ -48,20 +31,12 @@
       },
       "validators": [
         {
-          "regex": "^(?!.*[A-Z]).*$",
+          "regex": "^[\\u1780-\\u17FF\\u19E0-\\u19FF\\u1A00-\\u1A9F\\u0020]{1,30}$",
           "error": {
-            "ar": "لا يسمح باستخدام الأحرف الكبيرة",
-            "en": "No uppercase characters allowed"
+            "ar": "مسموح فقط بالأحرف الخميرية",
+            "en": "Allowed only khmer characters"
           },
-          "langCode": "km"
         },
-        {
-          "regex": "^[a-zA-Z0-9\\s]+$",
-          "error": {
-            "km": "តួអក្សរពិសេសមិនត្រូវបានអនុញ្ញាតទេ។",
-            "ara": "لا يسمح باستخدام الأحرف الخاصة"
-          }
-        }
       ],
       "alignmentGroup": "groupB",
       "required": true
